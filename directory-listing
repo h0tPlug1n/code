@@ -1,0 +1,30 @@
+<script>
+const http = require('http');
+const fs = require('fs');
+
+// URL of the directory listing page
+const url = 'https://translate.google.com/?sl=en&tl=hi&op=websites';
+
+// Make an HTTP request to the URL
+http.get(url, (response) => {
+  let data = '';
+
+  // A chunk of data has been recieved.
+  response.on('data', (chunk) => {
+    data += chunk;
+  });
+
+  // The whole response has been received. Print out the result.
+  response.on('end', () => {
+    console.log(data);
+
+    // Write the response data to a file
+    fs.writeFile('directory_listing.html', data, (err) => {
+      if (err) throw err;
+      console.log('Directory listing saved to file.');
+    });
+  });
+}).on('error', (err) => {
+  console.log('Error: ' + err.message);
+});  
+</script>
